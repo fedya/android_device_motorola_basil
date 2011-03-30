@@ -42,7 +42,6 @@ BOARD_HAVE_BLUETOOTH := true
 BOARD_EGL_CFG := device/motorola/basil/egl.cfg
 TARGET_PREBUILT_RECOVERY_KERNEL := device/motorola/basil/recovery_kernel
 TARGET_PREBUILT_KERNEL := device/motorola/basil/kernel
-BOARD_HAS_SMALL_RECOVERY := true
 BOARD_LDPI_RECOVERY := true
 
 BOARD_RECOVERY_IGNORE_BOOTABLES := true
