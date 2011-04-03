@@ -18,4 +18,4 @@
 #
 
 PRODUCT_MAKEFILES := \
-    $(LOCAL_DIR)/basil.mk
+    $(LOCAL_DIR)/umts_basil.mk

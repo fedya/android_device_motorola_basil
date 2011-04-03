@@ -22,7 +22,7 @@
                          AudioDecoderCap)>
 <!ELEMENT CamcorderProfiles (EncoderProfile+, ImageEncoding+, ImageDecoding, Camera)>
 <!ELEMENT EncoderProfile (Video, Audio)>
-<!ATTLIST EncoderProfile quality (high|low) #REQUIRED>
+<!ATTLIST EncoderProfile quality (high|mid|low) #REQUIRED>
 <!ATTLIST EncoderProfile fileFormat (mp4|3gp) #REQUIRED>
 <!ATTLIST EncoderProfile duration (30|60) #REQUIRED>
 <!ELEMENT Video EMPTY>
@@ -74,14 +74,14 @@
 <!--
      This file is used to declare the multimedia profiles and capabilities
      on an android-powered device.
--->
+--> 
 <MediaSettings>
     <!-- Each camcorder profile defines a set of predefined configuration parameters -->
     <CamcorderProfiles>
 
-        <EncoderProfile quality="high" fileFormat="mp4" duration="60">
+        <EncoderProfile quality="high" fileFormat="mp4" duration="30">
             <Video codec="h264"
-                   bitRate="3000000"
+                   bitRate="4000000"
                    width="720"
                    height="480"
                    frameRate="25" />
@@ -92,12 +92,12 @@
                    channels="1" />
         </EncoderProfile>
 
-        <EncoderProfile quality="low" fileFormat="mp4" duration="60">
-            <Video codec="m4v"
-                   bitRate="96000"
-                   width="176"
-                   height="144"
-                   frameRate="20" />
+        <EncoderProfile quality="low" fileFormat="3gp" duration="30">
+            <Video codec="h263"
+                   bitRate="200000"
+                   width="320"
+                   height="240"
+                   frameRate="15" />
 
             <Audio codec="amrnb"
                    bitRate="12200"
@@ -150,6 +150,11 @@
     <AudioEncoderCap name="amrnb" enabled="true"
         minBitRate="5525" maxBitRate="12200"
         minSampleRate="8000" maxSampleRate="8000"
+        minChannels="1" maxChannels="1" />
+
+    <AudioEncoderCap name="amrwb" enabled="true"
+        minBitRate="6600" maxBitRate="23850"
+        minSampleRate="16000" maxSampleRate="16000"
         minChannels="1" maxChannels="1" />
 
     <!--
