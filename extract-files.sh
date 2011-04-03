@@ -104,11 +104,6 @@ PRODUCT_COPY_FILES := \\
     vendor/motorola/__DEVICE__/proprietary/libnmea.so:obj/lib/libnmea.so \\
     vendor/motorola/__DEVICE__/proprietary/gralloc.omap3.so:obj/lib/hw/gralloc.omap3.so \\
 
-PRODUCT_COPY_FILES += \\
-    vendor/motorola/__DEVICE__/proprietary/ProgramMenuSystem.apk:/system/app/ProgramMenuSystem.apk \\
-    vendor/motorola/__DEVICE__/proprietary/ProgramMenu.apk:/system/app/ProgramMenu.apk \\
-    vendor/motorola/__DEVICE__/proprietary/PhoneConfig.apk:/system/app/PhoneConfig.apk
-
 # All the blobs necessary for sholes
 PRODUCT_COPY_FILES += \\
     vendor/motorola/__DEVICE__/proprietary/libgps.so:/system/lib/libgps.so \\
